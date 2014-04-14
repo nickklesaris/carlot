@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :car do
     color "brown"
-    year 2014
+    year "2014"
     mileage 1
     description ""
     manufacturer

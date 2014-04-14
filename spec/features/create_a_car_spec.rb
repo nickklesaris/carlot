@@ -18,10 +18,11 @@ scenario 'create a valid car' do
   car = FactoryGirl.create(:car)
   visit new_car_path
 
-  fill_in 'color', with: 'red'
-  select('1995', :from => 'year')
-  fill_in 'mileage', with: '19500'
-  fill_in 'description', with: ''
+  select('1995', :from => 'Year')
+  select('Ferrari', :from => 'Manufacturer')
+  fill_in 'Color', with: 'red'
+  fill_in 'Mileage', with: '19500'
+  fill_in 'Description', with: ''
   click_button 'Create Car'
   expect(page).to have_content("Car created.")
 end
