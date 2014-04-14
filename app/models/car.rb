@@ -4,5 +4,5 @@ class Car < ActiveRecord::Base
   validates :color, presence: true
   validates :year, presence: true, inclusion: {in:YEARS}
   validates :mileage, presence: true
-  validates :manufacturer, presence: true
+  #validates :manufacturer, presence: true
 end
